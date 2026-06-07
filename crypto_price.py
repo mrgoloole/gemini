@@ -5,9 +5,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-running = True
-
-
 
 def get_crypto_price(symbol="btc"):
 
@@ -22,7 +19,10 @@ def get_crypto_price(symbol="btc"):
         print(f"API Error: {e}")
         return None
 
-    for item in jsonData["symbols"]:
+    item = jsonData["symbols"]
 
-        return f" Symbol: {item['symbol']}, Price: {item['last']}\n"
+    return f" Symbol: {item[0]['symbol']}, Price: {item[0]['last']}\n"
 
+
+if __name__ == "__main__":
+    print(get_crypto_price("btc"))
