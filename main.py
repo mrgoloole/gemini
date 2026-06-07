@@ -78,7 +78,7 @@ while running:
             config=types.GenerateContentConfig(system_instruction=system_prompt),
         )
 
-    except (ConnectionError, ValueError, RuntimeError) as e:
+    except Exception as e:
         print(f"API Error: {e}")
         response = None
 
