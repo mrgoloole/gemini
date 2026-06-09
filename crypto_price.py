@@ -21,7 +21,7 @@ def get_crypto_price(symbol="btc"):
 
     item = jsonData["symbols"]
 
-    return f" Symbol: {item[0]['symbol']}, Price: {item[0]['last']}\n"
+    return item[0]["last"]
 
 
 if __name__ == "__main__":
