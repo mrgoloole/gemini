@@ -1,6 +1,5 @@
-from fastapi import FastAPI
-
 from analyzer import analyzer_crypto
+from fastapi import FastAPI
 
 app = FastAPI()
 
