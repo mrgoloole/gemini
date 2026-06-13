@@ -18,3 +18,13 @@ Real-time cryptocurrency price analyzer powered by Google Gemini AI.
 - Python
 - Google Gemini API
 - freecryptoapi
+
+## Live API
+- Base URL: https://gemini-production-34e7.up.railway.app
+
+### Endpoints
+- GET /analyze?coin=btc
+- GET /analyze?coin=eth&prompt=what is the trend?
+
+### Docs
+- https://gemini-production-34e7.up.railway.app/docs

@@ -1,10 +1,11 @@
 import os
 from datetime import datetime, timezone
 
-from crypto_price import get_crypto_price
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
+
+from crypto_price import get_crypto_price
 
 load_dotenv()
 
@@ -73,7 +74,7 @@ def analyzer_crypto(coin, prompt):
             config=types.GenerateContentConfig(system_instruction=system_prompt),
         )
 
-    except Exception as e:  # noqa: BLE001
+    except Exception as e:
         print(f"API Error: {e}")
         response = None
 
